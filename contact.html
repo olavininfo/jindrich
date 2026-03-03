@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Jindrich Engineering</title>
+    <meta name="description"
+        content="Contact Changzhou Jindrich Mechanical Equipment Co., Ltd. for engineering design, consulting, and equipment trading services.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.svg" alt="Jindrich Logo">
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link" data-i18n="nav.services">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="services/food.html" data-i18n="services.food">Food Engineering</a>
+                        <a href="services/beverage.html" data-i18n="services.beverage">Beverage Engineering</a>
+                        <a href="services/dairy.html" data-i18n="services.dairy">Dairy Engineering</a>
+                        <a href="services/biopharma.html" data-i18n="services.biopharma">BioPharma Engineering</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+                <div class="lang-toggle">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">中</button>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══ PAGE HERO ═══ -->
+    <section class="page-hero">
+        <div class="hero-bg">
+            <img src="images/engineering-site.png" alt="Contact Jindrich" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1 data-i18n="contact.hero.title">Contact Us</h1>
+            <p data-i18n="contact.hero.desc">Get in touch to discuss your engineering project</p>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT INFO ═══ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 data-i18n="contact.section.title">Get In Touch</h2>
+            </div>
+            <div class="contact-grid fade-in">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h4 data-i18n="contact.phone.label">Phone</h4>
+                    <p><a href="tel:+8605198166 0808">+86 0519-81660808</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h4 data-i18n="contact.email.label">Email</h4>
+                    <p><a href="mailto:info@jindrich.com.cn">info@jindrich.com.cn</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4 data-i18n="contact.address.label">Address</h4>
+                    <p data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan Middle Road, Xinbei District,
+                        Changzhou, Jiangsu, China</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-section">
+        <div class="container fade-in">
+            <h2 data-i18n="cta.title">Ready to Start Your Project?</h2>
+            <p data-i18n="cta.desc">Get in touch with our engineering team today.</p>
+            <a href="mailto:info@jindrich.com.cn" class="btn btn-accent">✉️ info@jindrich.com.cn</a>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.svg" alt="Jindrich Logo">
+                    <p data-i18n="footer.desc">Professional engineering solutions for food, beverage, dairy, and
+                        biopharmaceutical industries.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.quicklinks">Quick Links</h4>
+                    <a href="services/food.html" data-i18n="services.food">Food Engineering</a>
+                    <a href="services/beverage.html" data-i18n="services.beverage">Beverage Engineering</a>
+                    <a href="services/dairy.html" data-i18n="services.dairy">Dairy Engineering</a>
+                    <a href="services/biopharma.html" data-i18n="services.biopharma">BioPharma Engineering</a>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contactinfo">Contact Us</h4>
+                    <p><span>📞</span> <a href="tel:+86051981660808">+86 0519-81660808</a></p>
+                    <p><span style="color: var(--color-accent); font-style: normal; font-size: 1.1em; line-height: 1;">✉</span> <a href="mailto:info@jindrich.com.cn">info@jindrich.com.cn</a></p>
+                    <p><span>📍</span> <span data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan Middle Road, Xinbei
+                            District, Changzhou, Jiangsu, China</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 Changzhou Jindrich Mechanical Equipment Co., Ltd. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

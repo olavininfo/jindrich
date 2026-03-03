@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jindrich Engineering — Engineering for a better world</title>
+  <meta name="description"
+    content="Changzhou Jindrich Mechanical Equipment Co., Ltd. — Professional engineering design, consulting, and equipment trading for food, beverage, dairy, and biopharmaceutical industries.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.svg" alt="Jindrich Logo">
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link" data-i18n="nav.services">Services</a>
+          <div class="dropdown-menu">
+            <a href="services/food.html" data-i18n="services.food">Food Engineering</a>
+            <a href="services/beverage.html" data-i18n="services.beverage">Beverage Engineering</a>
+            <a href="services/dairy.html" data-i18n="services.dairy">Dairy Engineering</a>
+            <a href="services/biopharma.html" data-i18n="services.biopharma">BioPharma Engineering</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中</button>
+        </div>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Industrial Engineering Complex" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-slogan" data-i18n="hero.slogan">ENGINEERING FOR A BETTER WORLD</p>
+        <h1 data-i18n="hero.title">Professional Engineering Solutions for Global Industry</h1>
+        <p data-i18n="hero.desc">End-to-end engineering design, technical consulting, and equipment trading services for
+          food, beverage, dairy, and biopharmaceutical industries.</p>
+        <div class="hero-buttons">
+          <a href="#industries" class="btn btn-accent" data-i18n="hero.btn.services">Our Services</a>
+          <a href="contact.html" class="btn btn-outline" data-i18n="hero.btn.contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INDUSTRIES ═══ -->
+  <section class="section" id="industries">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 data-i18n="industry.title">Our Industries</h2>
+        <p class="section-subtitle" data-i18n="industry.subtitle">We deliver professional engineering solutions across
+          four high-standard industries</p>
+      </div>
+      <div class="industry-grid">
+        <a href="services/food.html" class="industry-card fade-in">
+          <img src="images/food-1.png" alt="Food Engineering" loading="lazy">
+          <div class="industry-card-overlay">
+            <h3 data-i18n="industry.food.title">Food Engineering</h3>
+            <p data-i18n="industry.food.desc">Complete engineering solutions for food processing facilities</p>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="services/beverage.html" class="industry-card fade-in">
+          <img src="images/beverage-1.png" alt="Beverage Engineering" loading="lazy">
+          <div class="industry-card-overlay">
+            <h3 data-i18n="industry.beverage.title">Beverage Engineering</h3>
+            <p data-i18n="industry.beverage.desc">Cutting-edge design for beverage production lines</p>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="services/dairy.html" class="industry-card fade-in">
+          <img src="images/dairy-1.png" alt="Dairy Engineering" loading="lazy">
+          <div class="industry-card-overlay">
+            <h3 data-i18n="industry.dairy.title">Dairy Engineering</h3>
+            <p data-i18n="industry.dairy.desc">Hygienic engineering for dairy processing plants</p>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="services/biopharma.html" class="industry-card fade-in">
+          <img src="images/biopharma-1.png" alt="BioPharma Engineering" loading="lazy">
+          <div class="industry-card-overlay">
+            <h3 data-i18n="industry.biopharma.title">BioPharma Engineering</h3>
+            <p data-i18n="industry.biopharma.desc">GMP-compliant facilities for pharmaceutical manufacturing</p>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ADVANTAGES ═══ -->
+  <section class="section section-alt" id="advantages">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 data-i18n="advantage.title">Why Jindrich</h2>
+        <p class="section-subtitle" data-i18n="advantage.subtitle">What sets us apart in industrial engineering</p>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-item fade-in">
+          <div class="advantage-icon">⚙️</div>
+          <h4 data-i18n="adv1.title">End-to-End Engineering</h4>
+          <p data-i18n="adv1.desc">From factory planning and process design to equipment procurement — all under one
+            roof.</p>
+        </div>
+        <div class="advantage-item fade-in">
+          <div class="advantage-icon">🏭</div>
+          <h4 data-i18n="adv2.title">Deep Industry Focus</h4>
+          <p data-i18n="adv2.desc">Two decades of specialized expertise in food, beverage, dairy, and biopharmaceutical
+            engineering.</p>
+        </div>
+        <div class="advantage-item fade-in">
+          <div class="advantage-icon">📋</div>
+          <h4 data-i18n="adv3.title">International Standards</h4>
+          <p data-i18n="adv3.desc">Proficient in GMP, ISO, and HACCP regulations to ensure full project compliance.</p>
+        </div>
+        <div class="advantage-item fade-in">
+          <div class="advantage-icon">🌐</div>
+          <h4 data-i18n="adv4.title">China Edge + Global View</h4>
+          <p data-i18n="adv4.desc">Leveraging China's supply chain advantages with international engineering management
+            expertise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <div class="container fade-in">
+      <h2 data-i18n="cta.title">Ready to Start Your Project?</h2>
+      <p data-i18n="cta.desc">Get in touch with our engineering team today.</p>
+      <a href="contact.html" class="btn btn-accent" data-i18n="cta.btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="Jindrich Logo">
+          <p data-i18n="footer.desc">Professional engineering solutions for food, beverage, dairy, and biopharmaceutical
+            industries.</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.quicklinks">Quick Links</h4>
+          <a href="services/food.html" data-i18n="services.food">Food Engineering</a>
+          <a href="services/beverage.html" data-i18n="services.beverage">Beverage Engineering</a>
+          <a href="services/dairy.html" data-i18n="services.dairy">Dairy Engineering</a>
+          <a href="services/biopharma.html" data-i18n="services.biopharma">BioPharma Engineering</a>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contactinfo">Contact Us</h4>
+          <p><span>📞</span> <a href="tel:+86051981660808">+86 0519-81660808</a></p>
+          <p><span style="color: var(--color-accent); font-style: normal; font-size: 1.1em; line-height: 1;">✉</span> <a href="mailto:info@jindrich.com.cn">info@jindrich.com.cn</a></p>
+          <p><span>📍</span> <span data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan Middle Road, Xinbei District,
+              Changzhou, Jiangsu, China</span></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2025 Changzhou Jindrich Mechanical Equipment Co., Ltd. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
