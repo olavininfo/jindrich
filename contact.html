@@ -9,6 +9,7 @@
         content="Contact Changzhou Jindrich Mechanical Equipment Co., Ltd. for engineering design, consulting, and equipment trading services.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -55,39 +56,115 @@
         </div>
     </section>
 
-    <!-- ═══ CONTACT INFO ═══ -->
+    <!-- ═══ CONTACT SECTION ═══ -->
     <section class="section">
         <div class="container">
             <div class="section-header fade-in">
                 <h2 data-i18n="contact.section.title">Get In Touch</h2>
             </div>
-            <div class="contact-grid fade-in">
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h4 data-i18n="contact.phone.label">Phone</h4>
-                    <p><a href="tel:+8605198166 0808">+86 0519-81660808</a></p>
+            <div class="contact-layout fade-in">
+                <!-- LEFT: Contact Info Cards -->
+                <div class="contact-info-side">
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h4 data-i18n="contact.phone.label">Phone</h4>
+                        <p><a href="tel:+86051981660808">+86 0519-81660808</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h4 data-i18n="contact.address.label">Address</h4>
+                        <p data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan Middle Road, Xinbei
+                            District, Changzhou, Jiangsu, China</p>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <h4 data-i18n="contact.email.label">Email</h4>
-                    <p><a href="mailto:info@jindrich.com.cn">info@jindrich.com.cn</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h4 data-i18n="contact.address.label">Address</h4>
-                    <p data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan Middle Road, Xinbei District,
-                        Changzhou, Jiangsu, China</p>
+
+                <!-- RIGHT: Contact Form -->
+                <div class="contact-form-side">
+                    <form id="contactForm" novalidate>
+                        <!-- Name Row: EN = First + Last, ZH = single field -->
+                        <div class="form-row form-row-name" id="nameRowEn">
+                            <div class="form-group">
+                                <label for="firstName" data-i18n="form.firstname">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required
+                                    data-i18n-placeholder="form.firstname.ph">
+                                <span class="form-error" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" data-i18n="form.lastname">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required
+                                    data-i18n-placeholder="form.lastname.ph">
+                                <span class="form-error" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row" id="nameRowZh" style="display:none;">
+                            <div class="form-group" style="flex:1;">
+                                <label for="fullName" data-i18n="form.fullname">姓名</label>
+                                <input type="text" id="fullName" name="fullName"
+                                    data-i18n-placeholder="form.fullname.ph">
+                                <span class="form-error" id="fullNameError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-row">
+                            <div class="form-group" style="flex:1;">
+                                <label for="email" data-i18n="form.email">Business Email</label>
+                                <input type="email" id="email" name="email" required
+                                    data-i18n-placeholder="form.email.ph">
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Country + Phone Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="country" data-i18n="form.country">Country / Region</label>
+                                <select id="country" name="country" required>
+                                    <option value="" data-i18n="form.country.ph">Select Country</option>
+                                </select>
+                                <span class="form-error" id="countryError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-i18n="form.phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+86 13800138000">
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-row">
+                            <div class="form-group" style="flex:1;">
+                                <label for="message" data-i18n="form.message">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    data-i18n-placeholder="form.message.ph"></textarea>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Turnstile -->
+                        <div class="form-row">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAACmCQX6kwn3mDd8c"
+                                data-theme="light"></div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-accent form-submit-btn" id="submitBtn">
+                                <span data-i18n="form.submit">Send Message</span>
+                                <span class="btn-spinner" id="btnSpinner" style="display:none;"></span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success / Error Feedback -->
+                    <div class="form-feedback" id="formFeedback" style="display:none;">
+                        <div class="feedback-icon" id="feedbackIcon">✅</div>
+                        <h3 id="feedbackTitle" data-i18n="form.success.title">Message Sent!</h3>
+                        <p id="feedbackDesc" data-i18n="form.success.desc">Thank you for reaching out. We will get
+                            back to you within 1-2 business days.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ═══ CTA ═══ -->
-    <section class="cta-section">
-        <div class="container fade-in">
-            <h2 data-i18n="cta.title">Ready to Start Your Project?</h2>
-            <p data-i18n="cta.desc">Get in touch with our engineering team today.</p>
-            <a href="mailto:info@jindrich.com.cn" class="btn btn-accent">✉️ info@jindrich.com.cn</a>
         </div>
     </section>
 
@@ -110,8 +187,12 @@
                 <div class="footer-contact">
                     <h4 data-i18n="footer.contactinfo">Contact Us</h4>
                     <p><span>📞</span> <a href="tel:+86051981660808">+86 0519-81660808</a></p>
-                    <p><span style="color: var(--color-accent); font-style: normal; font-size: 1.1em; line-height: 1;">✉</span> <a href="mailto:info@jindrich.com.cn">info@jindrich.com.cn</a></p>
-                    <p><span>📍</span> <span data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan Middle Road, Xinbei
+                    <p><span
+                            style="color: var(--color-accent); font-style: normal; font-size: 1.1em; line-height: 1;">✉</span>
+                        <a href="mailto:info@jindrich.com.cn">info@jindrich.com.cn</a>
+                    </p>
+                    <p><span>📍</span> <span data-i18n="contact.address">Sanjing Industrial Park, No. 23 Huashan
+                            Middle Road, Xinbei
                             District, Changzhou, Jiangsu, China</span></p>
                 </div>
             </div>
@@ -124,6 +205,7 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 
 </html>
