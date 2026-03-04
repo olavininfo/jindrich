@@ -198,7 +198,7 @@ const COUNTRIES = [
 ];
 
 // ── Worker API endpoint (to be updated after deployment) ──
-const WORKER_API_URL = 'https://jindrich-contact-api.YOUR_CF_SUBDOMAIN.workers.dev';
+const WORKER_API_URL = 'https://jindrich-contact-api.intechwell.workers.dev/';
 
 // ── Turnstile widget ID for reset ──
 let turnstileWidgetId = null;
