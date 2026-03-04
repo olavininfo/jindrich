@@ -172,6 +172,7 @@ const translations = {
     zh: '与我们联系，讨论您的工程项目'
   },
   'contact.section.title': { en: 'Get In Touch', zh: '联系方式' },
+  'contact.section.subtitle': { en: 'Get in touch with our engineering team today.', zh: '立即联系我们的工程设计团队。' },
   'contact.phone.label': { en: 'Phone', zh: '电话' },
   'contact.email.label': { en: 'Email', zh: '邮箱' },
   'contact.address.label': { en: 'Address', zh: '地址' },
